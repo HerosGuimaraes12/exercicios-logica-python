@@ -1,3 +1,4 @@
+
 # exercicios-logica-python
 # Nível 1 — Revisão + lógica simples
 # 1. Aprovado ou reprovado?
@@ -19,3 +20,5 @@ elif media >= 5:
     print("Recuperação")
 else:
     print("Reprovado")
+
+    
