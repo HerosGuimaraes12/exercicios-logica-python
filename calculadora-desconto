@@ -1,0 +1,19 @@
+# Nível 1 — Revisão + lógica simples
+# 5. Calculadora de desconto em uma compra
+# Peça ao usuário:
+# - O valor total da compra (em R$)
+# - O percentual de desconto a ser aplicado
+# Calcule o valor do desconto e subtraia do total
+# Mostre:
+# - O valor do desconto aplicado
+# - O valor final a pagar com duas casas decimais
+
+# Exemplo de código:
+valor_total = float(input("Digite o valor total da compra (R$): "))
+desconto_percentual = float(input("Digite o desconto (%) a ser aplicado: "))
+
+valor_desconto = (desconto_percentual / 100) * valor_total
+valor_final = valor_total - valor_desconto
+
+print(f"\nDesconto aplicado: R$ {valor_desconto:.2f}")
+print(f"Valor final a pagar: R$ {valor_final:.2f}")
