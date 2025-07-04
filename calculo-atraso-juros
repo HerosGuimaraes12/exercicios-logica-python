@@ -1,0 +1,26 @@
+# Nível 1 — Revisão + lógica simples
+# 6. Cálculo de boleto com atraso
+# Peça ao usuário:
+# - O valor original do boleto
+# - O número de dias de atraso
+# Se não houver atraso (dias = 0), o valor a pagar é o original
+# Se houver atraso:
+# - Aplicar multa de 2% sobre o valor original
+# - Calcular juros de 0,1% ao dia (0.001 * dias de atraso)
+# Mostrar:
+# - Multa, juros e valor total a pagar, formatados com duas casas decimais
+
+# Exemplo de código:
+valor_original = float(input("Digite o valor do boleto (R$): "))
+dias_atraso = int(input("Digite o número de dias de atraso: "))
+
+if dias_atraso == 0:
+    print(f"Pagamento em dia. Valor a pagar: R$ {valor_original:.2f}")
+else:
+    multa = valor_original * 0.02
+    juros = valor_original * 0.001 * dias_atraso
+    valor_total = valor_original + multa + juros
+
+    print(f"\nMulta por atraso: R$ {multa:.2f}")
+    print(f"Juros acumulado: R$ {juros:.2f}")
+    print(f"Valor total a pagar: R$ {valor_total:.2f}")
