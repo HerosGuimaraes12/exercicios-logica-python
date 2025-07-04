@@ -1,0 +1,20 @@
+# Nível 2 — Condições encadeadas e múltiplos caminhos
+# 1. Sistema de Login Simples
+# Peça ao usuário:
+# - Nome de usuário
+# - Senha
+# Valide os dados com as seguintes regras:
+# - Se usuário for "admin" e senha for "1234", mostrar "Login bem-sucedido!"
+# - Se o usuário for "admin", mas a senha estiver errada, mostrar "Senha incorreta."
+# - Se o usuário for diferente de "admin", mostrar "Usuário não encontrado."
+
+# Exemplo de código:
+usuario = input("Nome de usuário: ")
+senha = input("Senha: ")
+
+if usuario == "admin" and senha == "1234":
+    print("Login bem-sucedido!")
+elif usuario == "admin":
+    print("Senha incorreta.")
+else:
+    print("Usuário não encontrado.")
