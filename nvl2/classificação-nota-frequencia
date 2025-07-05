@@ -1,0 +1,34 @@
+# Nível 2 — Condições encadeadas e múltiplos caminhos
+# 5. Classificação de aluno por nota e frequência (com cálculo automático da frequência)
+# Peça ao usuário:
+# - Nota final (de 0 a 10)
+# - Total de aulas
+# - Quantidade de faltas
+#
+# Calcule a frequência com a fórmula:
+#     frequência = ((total_aulas - faltas) / total_aulas) * 100
+#
+# Classifique o aluno assim:
+# - Se frequência < 75% → "Reprovado por falta"
+# - Caso contrário:
+#   - Se nota >= 7 → "Aprovado"
+#   - Se nota entre 5 e 6.9 → "Recuperação"
+#   - Se nota < 5 → "Reprovado por nota"
+
+# Exemplo de código:
+nota = float(input("Digite a nota final do aluno (0 a 10): "))
+total_aulas = int(input("Digite o total de aulas: "))
+faltas = int(input("Digite o número de faltas: "))
+
+frequencia = ((total_aulas - faltas) / total_aulas) * 100
+print(f"Frequência: {frequencia:.1f}%")
+
+if frequencia < 75:
+    print("Reprovado por falta")
+else:
+    if nota >= 7:
+        print("Aprovado")
+    elif nota >= 5:
+        print("Recuperação")
+    else:
+        print("Reprovado por nota")
