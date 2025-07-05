@@ -1,0 +1,29 @@
+# Nível 2 — Condições encadeadas e múltiplos caminhos
+# 2. Classificação de Triângulos (com verificação completa)
+# Peça ao usuário os comprimentos dos três lados de um triângulo.
+# Verifique se os lados são maiores que zero e se formam um triângulo válido:
+# - A soma de dois lados deve ser maior que o terceiro.
+# Se for válido, classifique o triângulo:
+# - Equilátero: todos os lados iguais
+# - Isósceles: dois lados iguais
+# - Escaleno: todos os lados diferentes
+# Caso contrário, informe que não forma um triângulo.
+
+# Exemplo de código:
+lado1 = float(input("Digite o comprimento do lado 1: "))
+lado2 = float(input("Digite o comprimento do lado 2: "))
+lado3 = float(input("Digite o comprimento do lado 3: "))
+
+if (
+    lado1 > 0 and lado2 > 0 and lado3 > 0 and
+    (lado1 + lado2 > lado3) and
+    (lado1 + lado3 > lado2) and
+    (lado2 + lado3 > lado1)):
+    if lado1 == lado2 == lado3:
+        print("Triângulo Equilátero")
+    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
+        print("Triângulo Isósceles")
+    else:
+        print("Triângulo Escaleno")
+else:
+    print("Os valores informados NÃO formam um triângulo.")
