@@ -1,0 +1,19 @@
+# Nível 2 — Condições encadeadas e múltiplos caminhos
+# 4. Cálculo de tarifa com base na idade
+# Peça ao usuário sua idade e determine a tarifa:
+# - Menores de 6 anos: "Tarifa: Gratuita (criança)"
+# - De 6 a 17 anos: "Tarifa: Estudantil (meia passagem)"
+# - De 18 a 59 anos: "Tarifa: Normal"
+# - A partir de 60 anos: "Tarifa: Gratuita (idoso)"
+
+# Exemplo de código:
+idade = int(input("Digite sua idade: "))
+
+if idade < 6:
+    print("Tarifa: Gratuita (criança)")
+elif idade <= 17:
+    print("Tarifa: Estudantil (meia passagem)")
+elif idade < 60:
+    print("Tarifa: Normal")
+else:
+    print("Tarifa: Gratuita (idoso)")
