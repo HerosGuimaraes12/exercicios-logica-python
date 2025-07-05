@@ -1,0 +1,35 @@
+# Nível 2 — Condições encadeadas e múltiplos caminhos
+# 3. Sistema de Desconto em Transporte Público
+# Peça ao usuário:
+# - Sua idade
+# - O tipo de cartão: "idoso", "estudante" ou "comum"
+#
+# Regras:
+# - Se o cartão for "idoso" e a idade for 60 anos ou mais → "Tarifa gratuita."
+# - Se for "idoso" e a idade for menor que 60 → "Cartão inválido para essa idade."
+# - Se o cartão for "estudante" e a idade estiver entre 6 e 17 → "Tarifa: R$ 2,00"
+# - Se for "estudante" e a idade não estiver entre 6 e 17 → "Cartão de estudante não disponível para essa idade."
+# - Se o cartão for "comum" → "Tarifa: R$ 4,00"
+# - Qualquer outro tipo de cartão → "Tipo de cartão inválido."
+
+# Exemplo de código:
+idade = int(input("Digite sua idade: "))
+tipo_de_cartao = input("Digite o tipo de cartão (comum, estudante ou idoso): ").lower()
+
+if tipo_de_cartao == "idoso":
+    if idade >= 60:
+        print("Tarifa gratuita.")
+    else:
+        print("Cartão inválido para essa idade.")
+
+elif tipo_de_cartao == "estudante":
+    if 6 <= idade <= 17:
+        print("Tarifa: R$ 2,00")
+    else:
+        print("Cartão de estudante não disponível para essa idade.")
+
+elif tipo_de_cartao == "comum":
+    print("Tarifa: R$ 4,00")
+
+else:
+    print("Tipo de cartão inválido.")
